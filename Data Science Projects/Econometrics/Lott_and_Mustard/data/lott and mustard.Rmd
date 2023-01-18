@@ -1,0 +1,289 @@
+---
+title: "Lott and Mustard Replication"
+author: "Afif Mazhar"
+date: "05/03/2022"
+output: pdf_document
+header-includes:
+    - \usepackage[labelformat=empty]{caption}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+librarian::shelf(bacondecomp, stargazer, tidyverse, magrittr, dplyr, foreign, knitr, plm, lfe, estimatr, data.table, did, coefplot, kableExtra, here, Rcpp, lfe, ggplot2, did, ggthemes, gridExtra, reshape2, float, cowplot, caption)
+
+## Load data and create variables
+state_data <- read_csv("state_data.csv")%>%
+  dplyr::filter(1976<year & 1993 > year)
+state_data <- state_data[!(is.na(state_data$fipsstat)),]
+ldata <- state_data[c('lmur','lrap','laga','lrob','laut','lbur','llar')]
+aodata <- state_data[c('aomur','aorap','aoaga','aorob','aoaut','aobur','aolar')]
+```
+
+## I. Introduction
+|
+|       In 1997, John R. Lott and David B. Mustard published "Crime, Deterrence, and Right-to-Carry Concealed Handguns," an article that delineated the causality between citizens carrying concealed weapons and the violent crime rate. The orthodox method for causal inference prior to the 2000s was predicated about the fixed effects model, more particularly the panel fixed effects model. In the modern era, however, an amalgamation of research design methods have risen to prominence. The primary purpose of this study is to understand the contemporary methods of research design and scrutinize these studies with earlier analyses. It is significant, almost vital to have the specific understanding behind the historical changes of causality design as they include an additional factor for interpretation -- treatment timing. For those interested in difference-in-difference methods, it is best to understand the initial evaluations to have a full grasp of status quo research desings..
+
+## II. Background and Economic Theory
+|
+|       "Crime, Deterrence, and Right-to-Carry Concealed Handguns" was written to dive further into the effects of concealed handgun permits on citizens and the crime rate. Gun violence is rampant across the United States, resulting in hundreds of thousands of gun encounters that can potentially result in fatalities. The literature surrounding gun control emphasizes that guns have been used defensively and have proved effective in preventing crime; thus, on net, these uses have saved lives. Lott and Mustard argue about the defensive nature of gun use and the reduced "hot burglary" (residents at home during burglary) percentage in the United States compared to Canada or Britain, correlative with the laxer restrictions on gun laws that America propagates. In fact, Lott and Mustard argue that the individual stories which use guns to defend themselves have given way for 31 states to adopt laws that give authorities the right to issue concealed-weapons permits to qualified applications (up from 9 states in 1986). More specifically, Lott and Mustard argue about the "shall issue" concealed handgun permit laws, which require permit requests be granted unless the individual has a criminal record or a history of significant mental illness. 
+|
+|       Table 1 below indicates when 18 states face the "shall issue" concealed handgun permit laws and the introductory year of the respective law.
+
+```{r Table 1, echo = FALSE}
+## Table 1
+Table1 <- state_data %>% subset(shalll==1) %>% group_by(state) %>% summarize(group = min(year))
+Table1 <- Table1[order(Table1$group), ]
+state_data <- merge(state_data, Table1, 'state', all.x = TRUE)
+state_data$group[is.na(state_data$group)] <- 0
+knitr::kable(Table1, caption="Table 1: Year of States that passed RTC laws", format = "latex", booktabs = TRUE, longtable=TRUE) %>%
+  kable_styling(Table1, latex_options = c("HOLD_position","striped"), position = "center")
+```
+
+|       And thus, the question must be asked: "Will allowed concealed handguns make it likely that otherwise law-abiding citizens will harm each other? Or will the threat of citizens carrying weapons primarily deter criminals?" 
+|
+|       Lott and Mustard warrant their argument with anecdotal evidence from American burglars that fear potentially armed victims and have to "case" a house or avoid late-night burglaries. Logically, the argument is sound; weapons create fear, regardless of affiliation and thus, should theoretically prevent/deter crime. The analysis utilized a cross-sectional time series data for US counties in 1977 to 1992, ultimately finding that citizens with concealed carry deter violent crimes. There were two models deployed for analysis: a dummy variable model and a spline/trend model. The dummy model used a dummy variable for the passage of the "right-to-carry" (RTC) laws as 0 or 1. This tests whether the average crime level pre-passage is different that of post-passage on a statistical level. The spline model, on the other hand, measures the crime trend alteration following the adoption of the RTC laws. It utilizes a spline variable that indicates the number of years post-passage.
+|
+|       Lott and Mustard's estimates find that murder, rape, aggravated assault, and overall violent crime falls by 4-7% with passage of the RTC laws. They also find that property crime rates increased by about 2-9%, and they conclude that property crime rates are the substitute for violent crime given the prior argument that criminals want to reduce the risk that they would be shot. Therefore, gun-carrying laws conclusively deter violent crimes according to the original paper. In order to explore this claim further, we will utilize contemporary research methods and data post-1997.
+
+## III. Data
+|
+|       The data that I will be using to conduct the research design experiment is state-level data as opposed to the original study which employed county-level data. There are seven crime categories: murder, rape, aggravated assault, robberty, auto theft, burglary, larceny, violent crimes (summary of murder, rape, aggravated assault and robbery), and property crimes (theft, burglary, and larceny). It also includes the rates of these crimes, a "shall issue" dummy variable, state trend variables, state-based statistics, arrest rates for the crimes, and logs of the previous variables. The data incorporates the years from 1977 up to 2007. Table 2 portrays the summary statistics (replicated from the original Lott and Mustard paper) for the crime outcomes, inclusive of the added data and specific to the state-level interpretations.
+
+```{r table 2, echo=FALSE, warning=FALSE, results="asis"}
+select <- c('ratmur', 'ratvio', 'rataga', 'ratpro','aovio','aomur','aopro','aorap','aorob','aoaga','aobur','aolar','aoaut')
+Table2 <- aggregate(state_data[select], by = state_data['state'], function(x) c(mean = mean(x), sd = sd(x)))
+summary_stats <- stargazer(Table2, summary = TRUE, float = FALSE, type = "latex", header = FALSE, omit.summary.stat = c("p25","p75","min","max"))
+
+```
+
+## IV. Empirical Model and Estimation
+|
+|     To illustrate the discussion surrounding violent crime deterrence in Lott and Mustard's paper, we will emphasize two specific models to recreate.
+## a. Two-Way Fixed Effects
+|
+|       The TWFE model is the original model used by Lott and Mustard to conduct the research design analysis. Below, in the model, is the similar results that were initially estimated with the unique specification of an extended time period and state-level parameters. This difference-in-difference research method can be used to produce remarkable causality between an treatment and outcome. Remember that the TWFE model deployed here does not account for treatment timing and may be limited in analysis.
+```{r model 1, echo=FALSE}
+#TWFE without controls
+
+for (i in 1:length(ldata)){
+  name = paste('coef_',names(ldata)[i],sep="")
+  form = as.formula(paste(names(ldata[i]),'~ shalll'))
+  ols = plm(form, data=state_data, index=c('state','year'), model='within' ,effect='twoways')
+  assign(name,ols)
+}
+
+#TWFE with controls
+for (i in 1:length(ldata)){
+  name = paste('ccoef_',names(ldata)[i],sep="")
+  form = as.formula(paste(names(ldata[i]),'~ shalll + aovio + density + rpcpi + rpcui + rpcim + rpcrpo + popstate + ppwm1019 + ppbm1019 + ppnm1019 + ppwf1019 + ppbf1019 + ppnf1019 + ppwm2029 + ppbm2029 + ppnm2029 + ppwf2029 + ppbf2029 + ppnf2029 + ppwm3039 + ppbm3039 + ppnm3039 + ppwf3039 + ppbf3039 + ppnf3039 + ppwm4049 + ppbm4049 + ppnm4049 + ppwf4049 + ppbf4049 + ppnf4049 + ppwm5064 + ppbm5064 + ppnm5064 + ppwf5064 + ppbf5064 + ppnf5064 + ppwm65o + ppbm65o + ppnm65o + ppwf65o + ppbf65o + ppnf65o + factor(year) + factor(state)'))
+  ols = lm(form, data=state_data)
+  assign(name,ols)
+}
+
+#TWFE Model
+ATT <- c(-0.13203, 0.067602, 0.0076465, 0.03614, -0.037356, -0.032056, 0.016894)
+Model1 <- data.frame(ATT)
+rownames(Model1) <- c('Assault','Auto Theft','Burglary','Larceny','Murder','Rape','Robbery')
+knitr::kable(Model1, caption = "Lott and Mustard TWFE replication", format = "latex", booktabs =TRUE)%>%
+  kable_styling(Model1, latex_options = c("HOLD_position","striped"), position = "center")
+```
+## b. Bacon Decomposition
+|
+|       A major critique of the TWFE model was cited by Andrew Goodman-Bacon in 2019, who uniquely constructed a technique for specifying treatment timing effects. Table 3 depicts the results of the Goodman-Bacon estimation modeling.
+```{r Bacon Decomposition and Table 3, echo=FALSE, results="asis"}
+## Bacon Decomposition
+for (i in 1:length(ldata)){
+  name = paste('bcoef_',names(ldata)[i],sep="")
+  form = as.formula(paste(names(ldata[i]),'~ shalll'))
+  bacon_ols = bacon(form, state_data, id_var='state', time_var='year', quietly = T)
+  assign(name,bacon_ols)
+}
+  
+## Table 3
+coef_bacon <- sum(bacon_ols$estimate * bacon_ols$weight)
+bacon_ols <- bacon_ols %>% mutate(weighted_estimate = estimate * weight)
+grouped_treatment <- bacon_ols %>% group_by(type)%>% summarize(group_TE = sum(weighted_estimate))
+grouped_treatment <- grouped_treatment %>%add_row(type = 'Bacon Coefficient',group_TE = coef_bacon)
+knitr::kable(bacon_ols, caption = "Table 3: Goodman-Bacon Decomposition", format = "latex", booktabs =TRUE, longtable = TRUE)%>%
+  kable_styling(bacon_ols, latex_options = c("repeat_header", "HOLD_position","striped"), position = "center")
+```
+|
+|       The results that come from Goodman-Bacon's estimator compared to the original techniques are less than optimal for proving causality. The late to early 2x2s, more particularly the treatment and control groups that are treated at the ends of the different time periods, are problematic because they show the heterogeneity in times for the treatments (early as opposed to late) which also indicates that there an amalgamated impact from the treatment in the late group. Compared to the original TWFE model, this is imperative as selection bias exists in that decomposition method.
+## c. Callaway and Sant'anna
+|
+|       Another contemporary method of empirical analysis through TWFE was coined from Callaway and Sant'anna (2000) where there are two unique changes to the research design method. One change focused on removing the timing effects by grouping the treatments by cohorts (time periods that are shared between treatments group to control for treatment timing delivery relative to other cohorts). Another change utilizes a parametric estimator that permits historical information to be used for estimating the model's results. Below is the estimator: $$ATT = E[(G/E[G] - (p(x)C/ 1-p(x))/E[p(x)C/ 1-p(x)]) * (Yt-Yg1)]$$ 
+
+The model below uses the Callaway and Sant'anna estimator to produce the cohorts for the years when the "shall issue" laws were introduced and to accommodate for the timing effects.
+
+
+```{r Table 4, echo=FALSE, warning=FALSE}
+# Callaway Sant'anna model
+for (i in 1:length(ldata)){
+  name = paste('cscoef_',names(ldata)[i],sep="")
+  csols = att_gt(yname=names(ldata[i]), tname='year', idname='fipsstat', gname='group', xformla = ~density + rpcpi, data = state_data)
+  assign(name,csols)
+}
+slaga <- aggte(cscoef_laga, type = "simple", na.rm = TRUE)
+slaut <- aggte(cscoef_laut, type = "simple", na.rm = TRUE)
+slbur <- aggte(cscoef_lbur, type = "simple", na.rm = TRUE)
+sllar <- aggte(cscoef_llar, type = "simple", na.rm = TRUE)
+slmur <- aggte(cscoef_lmur, type = "simple", na.rm = TRUE)
+slrap <- aggte(cscoef_lrap, type = "simple", na.rm = TRUE)
+slrob <- aggte(cscoef_lrob, type = "simple", na.rm = TRUE)
+ATT <- c(-0.0635, -0.0455, -0.0509, -0.0221, -0.1079, -0.0552, -0.077)
+STDE <- c(0.0916, 0.0407, 0.0235, 0.0231, 0.029, 0.06, 0.0618)
+Lower <- c(-0.2431, -0.1252, -0.097, -0.0674, -0.1648, -0.1728, -0.1982)
+Upper <- c(0.116, 0.0342, -0.0049, 0.0231, -0.051, 0.0623, 0.0441)
+
+#Table 4
+Table4 <- data.frame(ATT,STDE,Lower,Upper)
+rownames(Table4) <- c('Assault','Auto Theft','Burglary','Larceny','Murder','Rape','Robbery')
+knitr::kable(Table4, caption = "Table 4: Average Treatment Effect by Crime", format =  "latex", booktabs =TRUE)%>%
+  kable_styling(Table4, latex_options = c("HOLD_position","striped"), position = "center")
+
+```
+|
+|       The results provided by the Callaway & Sant'anna model are different compared to the original Lott and Mustard paper that are smaller and less significant. This follows through with the hypothesis of timing treatments being a confounding factor in the previous results by the authors.
+
+## d. Event Study
+|
+|       One other method utilized in this analysis is the Sun & Abraham (2020) event study. Sun & Abraham use leads and lags into their model to account for the effects of differential timing of treatment and rectifying that trends are consistent over time. Another discrepancy from other contemporary methods is surrounding the interaction weighed estimator, which mixes the time distance from the treatment with the outcome; as aresult, compounding treatment over time is substantially reduced. Represented below are a series of figures that portray the controversial result: "shall issue" laws do not deter crimes. The figures also demonstrate pretrends appear to hold with the confidence intervals and that the treatment had a minimal, almost abyssmal impact on crime. The reductions and increases in specific crimes were already trending before the treatment was implemented. Out of all the various types of crime, auto theft had a relative impact from the treatment. It dropped a substantial amount a few lags after the treatment, which indicates that the pretrend did not hold. This was contradictory to the prior logic that Lott and Mustard (1997) stated where criminals may turn to auto-theft. Note each of the dependent variables are a logged form of the original crime.
+
+```{r event study, echo=FALSE, warning=FALSE}
+#Event Study
+
+state_data <- state_data %>%
+mutate(diff = year - group,
+lead1 = case_when(diff == -1 ~ 1, TRUE ~ 0),
+lead2 = case_when(diff == -2 ~ 1, TRUE ~ 0),
+lead3 = case_when(diff == -3~ 1, TRUE ~ 0),
+lead4 = case_when(diff == -4 ~ 1, TRUE ~ 0),
+lead5 = case_when(diff == -5 ~ 1, TRUE ~ 0),
+lead6 = case_when(diff == -6 ~ 1, TRUE ~ 0),
+lead7 = case_when(diff == -7 ~ 1, TRUE ~ 0),
+lead8 = case_when(diff == -8 ~ 1, TRUE ~ 0),
+lead9 = case_when(diff == -9 ~ 1, TRUE ~ 0),
+lead10 = case_when(diff == -10 ~ 1, TRUE ~ 0),
+lead11= case_when(diff == -11 ~ 1, TRUE ~ 0),
+lead12 = case_when(diff == -12 ~ 1, TRUE ~ 0),
+lead13 = case_when(diff == -13 ~ 1, TRUE ~ 0),
+lead14 = case_when(diff == -14 ~ 1, TRUE ~ 0),
+lag0 = case_when(diff == 0 ~ 1, TRUE ~ 0),
+lag1 = case_when(diff == 1~ 1, TRUE ~ 0 ),
+lag2 = case_when(diff == 2 ~ 1, TRUE ~ 0),
+lag3 = case_when(diff == 3~ 1, TRUE ~ 0),
+lag4 = case_when(diff == 4 ~ 1, TRUE ~ 0),
+lag5 = case_when(diff == 5 ~ 1, TRUE ~ 0),
+lag6 = case_when(diff == 6 ~ 1, TRUE ~ 0),
+lag7 = case_when(diff == 7 ~ 1, TRUE ~ 0),
+lag8 = case_when(diff == 8 ~ 1, TRUE ~ 0),
+lag9 = case_when(diff == 9 ~ 1, TRUE ~ 0),
+lag10 = case_when(diff == 10 ~ 1, TRUE ~ 0),
+lag11= case_when(diff == 11 ~ 1, TRUE ~ 0),
+lag12 = case_when(diff == 12 ~ 1, TRUE ~ 0),
+lag13 = case_when(diff == 13 ~ 1, TRUE ~ 0),
+lag14 = case_when(diff == 14 ~ 1, TRUE ~ 0))
+
+mureventform <- as.formula(paste('lmur~ + ',paste(paste(paste("lead",1:14,sep = ""), collapse = " + "),paste(paste("lag",1:14,sep = ""),collapse = " + "), sep = " + ")," | year + state | 0 | fipsstat"),)
+eventols <- felm(mureventform, weights = state_data$popstate, data = state_data)
+
+#Event Study Murder figure
+
+xa <- c('lead14','lead13','lead12','lead11','lead10','lead9','lead8','lead7','lead6','lead5','lead4','lead3','lead2','lead1','lag1','lag2','lag3','lag4','lag5','lag6','lag7','lag8','lag9','lag_10','lag11','lag12','lag13','lag14')
+murder_figure <- tibble(sd = c(eventols$cse[xa],0),mean  = c(coef(eventols)[xa],0),label = c(-14:14))
+
+murder_figure %>% ggplot(aes(x = label, y = mean, ymin = mean-1.96*sd, ymax = mean+1.96*sd)) +
+  geom_pointrange() +
+  theme_stata() +
+  xlab("Years from Right-to-Carry Law") +
+  ylab("Homicide Rate")
+#__________________________________________________________________________
+agaeventform <- as.formula(paste('laga ~ + ',paste(paste(paste("lead",1:14,sep = ""), collapse = " + "),paste(paste("lag",1:14,sep = ""),collapse = " + "), sep = " + ")," | year + state | 0 | fipsstat"),)
+eventols <- felm(agaeventform, weights = state_data$popstate, data = state_data)
+
+#Event Study Assault figure
+
+xa <- c('lead14','lead13','lead12','lead11','lead10','lead9','lead8','lead7','lead6','lead5','lead4','lead3','lead2','lead1','lag1','lag2','lag3','lag4','lag5','lag6','lag7','lag8','lag9','lag_10','lag11','lag12','lag13','lag14')
+assault_figure <- tibble(sd = c(eventols$cse[xa],0),mean  = c(coef(eventols)[xa],0),label = c(-14:14))
+
+assault_figure %>% ggplot(aes(x = label, y = mean, ymin = mean-1.96*sd, ymax = mean+1.96*sd)) +
+  geom_pointrange() +
+  theme_stata() +
+  xlab("Years from Right-to-Carry Law") +
+  ylab("Assault Rate")
+#___________________________________________________________________________
+lareventform <- as.formula(paste('llar~ + ',paste(paste(paste("lead",1:14,sep = ""), collapse = " + "),paste(paste("lag",1:14,sep = ""),collapse = " + "), sep = " + ")," | year + state | 0 | fipsstat"),)
+eventols <- felm(lareventform, weights = state_data$popstate, data = state_data)
+
+#Event Study Larceny figure
+
+xa <- c('lead14','lead13','lead12','lead11','lead10','lead9','lead8','lead7','lead6','lead5','lead4','lead3','lead2','lead1','lag1','lag2','lag3','lag4','lag5','lag6','lag7','lag8','lag9','lag_10','lag11','lag12','lag13','lag14')
+larceny_figure <- tibble(sd = c(eventols$cse[xa],0),mean  = c(coef(eventols)[xa],0),label = c(-14:14))
+
+larceny_figure %>% ggplot(aes(x = label, y = mean, ymin = mean-1.96*sd, ymax = mean+1.96*sd)) +
+  geom_pointrange() +
+  theme_stata() +
+  xlab("Years from Right-to-Carry Law") +
+  ylab("Larceny Rate")
+#____________________________________________________________________________
+bureventform <- as.formula(paste('lbur~ + ',paste(paste(paste("lead",1:14,sep = ""), collapse = " + "),paste(paste("lag",1:14,sep = ""),collapse = " + "), sep = " + ")," | year + state | 0 | fipsstat"),)
+eventols <- felm(bureventform, weights = state_data$popstate, data = state_data)
+
+#Event Study Burglary figure
+
+xa <- c('lead14','lead13','lead12','lead11','lead10','lead9','lead8','lead7','lead6','lead5','lead4','lead3','lead2','lead1','lag1','lag2','lag3','lag4','lag5','lag6','lag7','lag8','lag9','lag_10','lag11','lag12','lag13','lag14')
+burglary_figure <- tibble(sd = c(eventols$cse[xa],0),mean  = c(coef(eventols)[xa],0),label = c(-14:14))
+
+burglary_figure %>% ggplot(aes(x = label, y = mean, ymin = mean-1.96*sd, ymax = mean+1.96*sd)) +
+  geom_pointrange() +
+  theme_stata() +
+  xlab("Years from Right-to-Carry Law") +
+  ylab("Burglary Rate")
+#___________________________________________________________________________
+rapeventform <- as.formula(paste('lrap~ + ',paste(paste(paste("lead",1:14,sep = ""), collapse = " + "),paste(paste("lag",1:14,sep = ""),collapse = " + "), sep = " + ")," | year + state | 0 | fipsstat"),)
+eventols <- felm(rapeventform, weights = state_data$popstate, data = state_data)
+
+#Event Study Rape figure
+
+xa <- c('lead14','lead13','lead12','lead11','lead10','lead9','lead8','lead7','lead6','lead5','lead4','lead3','lead2','lead1','lag1','lag2','lag3','lag4','lag5','lag6','lag7','lag8','lag9','lag_10','lag11','lag12','lag13','lag14')
+rape_figure <- tibble(sd = c(eventols$cse[xa],0),mean  = c(coef(eventols)[xa],0),label = c(-14:14))
+
+rape_figure %>% ggplot(aes(x = label, y = mean, ymin = mean-1.96*sd, ymax = mean+1.96*sd)) +
+  geom_pointrange() +
+  theme_stata() +
+  xlab("Years from Right-to-Carry Law") +
+  ylab("Rape Rate")
+#____________________________________________________________________
+autoeventform <- as.formula(paste('laut~ + ',paste(paste(paste("lead",1:14,sep = ""), collapse = " + "),paste(paste("lag",1:14,sep = ""),collapse = " + "), sep = " + ")," | year + state | 0 | fipsstat"),)
+eventols <- felm(autoeventform, weights = state_data$popstate, data = state_data)
+
+#Event Study Auto figure
+
+xa <- c('lead14','lead13','lead12','lead11','lead10','lead9','lead8','lead7','lead6','lead5','lead4','lead3','lead2','lead1','lag1','lag2','lag3','lag4','lag5','lag6','lag7','lag8','lag9','lag_10','lag11','lag12','lag13','lag14')
+auto_figure <- tibble(sd = c(eventols$cse[xa],0),mean  = c(coef(eventols)[xa],0),label = c(-14:14))
+
+auto_figure %>% ggplot(aes(x = label, y = mean, ymin = mean-1.96*sd, ymax = mean+1.96*sd)) +
+  geom_pointrange() +
+  theme_stata() +
+  xlab("Years from Right-to-Carry Law") +
+  ylab("Auto Theft Rate")
+#_____________________________________________________________________
+robeventform <- as.formula(paste('lrob~ + ',paste(paste(paste("lead",1:14,sep = ""), collapse = " + "),paste(paste("lag",1:14,sep = ""),collapse = " + "), sep = " + ")," | year + state | 0 | fipsstat"),)
+eventols <- felm(robeventform, weights = state_data$popstate, data = state_data)
+
+#Event Study Robbery figure
+
+xa <- c('lead14','lead13','lead12','lead11','lead10','lead9','lead8','lead7','lead6','lead5','lead4','lead3','lead2','lead1','lag1','lag2','lag3','lag4','lag5','lag6','lag7','lag8','lag9','lag_10','lag11','lag12','lag13','lag14')
+robbery_figure <- tibble(sd = c(eventols$cse[xa],0),mean  = c(coef(eventols)[xa],0),label = c(-14:14))
+
+robbery_figure %>% ggplot(aes(x = label, y = mean, ymin = mean-1.96*sd, ymax = mean+1.96*sd)) +
+  geom_pointrange() +
+  theme_stata() +
+  xlab("Years from Right-to-Carry Law") +
+  ylab("Robbery Rate")
+
+```
+
+## V. Conclusion
+|
+|       This exercise has provided a more conceptual understanding of how TWFE is incredibly limited in regards to timing variations; more specifically how treatment effects are contingent due to timing. Contemporary methods are much more effective in detailing the missed nuances of older modeling techniques. The Bacon Decomposition method, Callaway and Sant'anna's DD estimator, Sun and Abraham's event study are all updated, unorthodox approaches comparative to the original TWFE model employed by Lott and Mustard. Furthermore, this analysis might tune more into reducing the credibility of Lott and Mustard's paper and the real world implications that follow such as the NRA utilizing the 1997 study as a warrant for improved gun rights. Generally speaking in the realm of causal inference, it is quite significant to have a deeper understanding of outdated methods and the status quo alternatives for quasi-experimental research design as minute details are relevant to designing an efficient, precise estimator for optimal conclusions.

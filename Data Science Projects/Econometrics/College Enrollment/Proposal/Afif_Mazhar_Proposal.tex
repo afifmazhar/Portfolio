@@ -1,0 +1,44 @@
+\documentclass{article}
+
+% these packages let you do math
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% we need these packages for fancy R tables
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+% these packages play with the spacing/margins of the document. Uncomment the commands on lines 16 and 17 to see what they do.
+\usepackage{a4wide}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{parskip}
+%\doublespacing
+%\geometry{margin=1.5in}
+
+% this package helps us with including images. Setting the graphics path makes it easier to refer to things in the \includegraphics command.
+\usepackage{graphicx}
+\graphicspath{ {../figures/} }
+
+% make some hyperlinks using the \href command
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+% set the author, title, and date of the document. \maketitle adds it to the document.
+\author{Afif Mazhar}
+\title{My Paper on NLSY02 Data}
+\date{Sping 2022}
+
+\begin{document}
+\maketitle
+
+\section{Data}
+
+We will be analyzing the dataset of National Longitudinal Survey of Youth from 1997. The data set reflects incarceration rates from the year 2002 and the respective gender/race associated with incarceration.
+\newpage
