@@ -25,3 +25,7 @@ Replication of Lott and Mustard (1997) to determine causality of passing Right-T
 The University of Texas at Austin, Causal Inference
 
 Economic research (FRED) conducted to determine the causality of the 2014 legalization of cannabis in Colorado and the state’s GDP through quasi-experimental research design (synthetic control method) in 9 categories. Experimental time-series panel data was collected to infer pre/post-treatment effects of the data; plotted visualizations of treatment effect and the gaps in estimators (produced a cumulative paper)
+
+## Gini Index
+
+WIP
