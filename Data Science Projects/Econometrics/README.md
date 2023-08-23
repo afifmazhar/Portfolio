@@ -17,14 +17,14 @@ Multi-variate time series forecasting conducted to analyze the relationship betw
 
 The University of Texas at Austin, Causal Inference
 
-Replication of Lott and Mustard (1997) to determine causality of passing Right-To-Carry laws across all states and the subsequent effects on 7 crime categories through two-way fixed effects, dummy regressions, OLS (weighted/unweighted) Created statistical tables in R and used contemporary methods of difference-in-difference quasi-experimental research design aimed to combat the controversial analysis provided in the paper
+Replication of Lott and Mustard (1997) to determine causality of passing Right-To-Carry laws across all states and the subsequent effects on 7 crime categories through two-way fixed effects, dummy regressions, OLS (weighted/unweighted) Created statistical tables in R and used contemporary methods of difference-in-difference quasi-experimental research design aimed to combat the controversial analysis provided in the paper.
 
 ## Colorado Synthetic Control
 “Colorado and the Economic Effect of Cannabis: A Synthetic Control Approach”
 
 The University of Texas at Austin, Causal Inference
 
-Economic research (FRED) conducted to determine the causality of the 2014 legalization of cannabis in Colorado and the state’s GDP through quasi-experimental research design (synthetic control method) in 9 categories. Experimental time-series panel data was collected to infer pre/post-treatment effects of the data; plotted visualizations of treatment effect and the gaps in estimators (produced a cumulative paper)
+Economic research (FRED) conducted to determine the causality of the 2014 legalization of cannabis in Colorado and the state’s GDP through quasi-experimental research design (synthetic control method) in 9 categories. Experimental time-series panel data was collected to infer pre/post-treatment effects of the data; plotted visualizations of treatment effect and the gaps in estimators (produced a cumulative paper).
 
 ## Gini Index
 
