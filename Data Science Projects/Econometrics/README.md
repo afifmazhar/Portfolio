@@ -3,9 +3,15 @@
 Welcome to the Econometrics section of my professional portfolio. This section includes a list of relative projects conducted in the realm of econometric modeling
 and techniques. Note that some projects are still in progress of being completed. Below lists a rundown of highlights of each project.
 
+## Cannabis Event Study
+
+"Cannabis: Legalization and the Economic Effects"
+
+A staggered adoption design of the difference-in-differences model deployed to understand the effects of marijuana legalization by policy passage. Effects to estimate include poverty, household income and GDP. WIP
+
 ## College Enrollment
 
-“College Enrollment by Race based on Macroeconomic Changes”.
+“College Enrollment by Race based on Macroeconomic Changes”
 
 The University of Texas at Austin, Time Series Econometrics
 
