@@ -1,0 +1,146 @@
+Fips	Location	TimeFrame	Data Type	Data	MOE
+2	Alaska	2017	Percent	0.12661	3.02E-02
+2	Alaska	2018	Percent	0.15061	2.39E-02
+2	Alaska	2019	Percent	0.10618	1.91E-02
+2	Alaska	2020	Percent	0.13957	1.96E-02
+2	Alaska	2021	Percent	0.14135	2.57E-02
+4	Arizona	2017	Percent	0.15353	1.70E-02
+4	Arizona	2018	Percent	0.15121	1.58E-02
+4	Arizona	2019	Percent	0.11577	1.66E-02
+4	Arizona	2020	Percent	0.14084	2.16E-02
+4	Arizona	2021	Percent	0.12418	1.68E-02
+5	Arkansas	2017	Percent	0.19722	2.15E-02
+5	Arkansas	2018	Percent	0.19195	1.64E-02
+5	Arkansas	2019	Percent	0.16934	2.06E-02
+5	Arkansas	2020	Percent	0.19248	2.18E-02
+5	Arkansas	2021	Percent	0.2071	2.22E-02
+6	California	2017	Percent	0.13125	6.99E-03
+6	California	2018	Percent	0.12962	7.18E-03
+6	California	2019	Percent	0.12806	8.01E-03
+6	California	2020	Percent	0.12082	7.87E-03
+6	California	2021	Percent	0.12709	8.14E-03
+8	Colorado	2017	Percent	0.11345	2.10E-02
+8	Colorado	2018	Percent	0.10135	2.00E-02
+8	Colorado	2019	Percent	0.10969	1.82E-02
+8	Colorado	2020	Percent	0.13365	2.35E-02
+8	Colorado	2021	Percent	0.10032	1.70E-02
+9	Connecticut	2017	Percent	0.1191	2.12E-02
+9	Connecticut	2018	Percent	0.12359	2.30E-02
+9	Connecticut	2019	Percent	0.12527	2.41E-02
+9	Connecticut	2020	Percent	0.11916	2.09E-02
+9	Connecticut	2021	Percent	0.10526	1.96E-02
+10	Delaware	2017	Percent	0.14674	2.10E-02
+10	Delaware	2018	Percent	0.15866	2.36E-02
+10	Delaware	2019	Percent	0.10529	2.12E-02
+10	Delaware	2020	Percent	0.13029	2.06E-02
+10	Delaware	2021	Percent	0.14428	2.44E-02
+11	Dist. of Columbia	2017	Percent	0.11043	1.37E-02
+11	Dist. of Columbia	2018	Percent	0.09639	1.57E-02
+11	Dist. of Columbia	2019	Percent	0.07871	1.22E-02
+11	Dist. of Columbia	2020	Percent	0.10097	1.43E-02
+11	Dist. of Columbia	2021	Percent	0.08629	1.43E-02
+12	Florida	2017	Percent	0.14512	1.29E-02
+12	Florida	2018	Percent	0.1399	1.33E-02
+12	Florida	2019	Percent	0.13038	1.04E-02
+12	Florida	2020	Percent	0.13749	1.16E-02
+12	Florida	2021	Percent	0.14394	1.07E-02
+13	Georgia	2017	Percent	0.12686	1.65E-02
+13	Georgia	2018	Percent	0.13536	1.85E-02
+13	Georgia	2019	Percent	0.13814	1.75E-02
+13	Georgia	2020	Percent	0.13344	2.18E-02
+13	Georgia	2021	Percent	0.14613	2.07E-02
+17	Illinois	2017	Percent	0.13116	1.61E-02
+17	Illinois	2018	Percent	0.11588	1.55E-02
+17	Illinois	2019	Percent	0.1122	1.33E-02
+17	Illinois	2020	Percent	0.1406	1.48E-02
+17	Illinois	2021	Percent	0.11884	1.26E-02
+22	Louisiana	2017	Percent	0.2218	1.91E-02
+22	Louisiana	2018	Percent	0.17907	1.77E-02
+22	Louisiana	2019	Percent	0.16881	2.10E-02
+22	Louisiana	2020	Percent	0.19218	2.24E-02
+22	Louisiana	2021	Percent	0.18222	2.23E-02
+23	Maine	2017	Percent	0.15656	3.30E-02
+23	Maine	2018	Percent	0.15953	3.30E-02
+23	Maine	2019	Percent	0.13807	2.27E-02
+23	Maine	2020	Percent	0.16652	2.65E-02
+23	Maine	2021	Percent	0.14741	3.75E-02
+24	Maryland	2017	Percent	0.11317	1.79E-02
+24	Maryland	2018	Percent	0.09367	1.82E-02
+24	Maryland	2019	Percent	0.09721	1.80E-02
+24	Maryland	2020	Percent	0.10054	1.91E-02
+24	Maryland	2021	Percent	0.13606	2.26E-02
+25	Massachusetts	2017	Percent	0.13449	1.55E-02
+25	Massachusetts	2018	Percent	0.12677	1.70E-02
+25	Massachusetts	2019	Percent	0.09746	1.41E-02
+25	Massachusetts	2020	Percent	0.10042	1.35E-02
+25	Massachusetts	2021	Percent	0.12101	1.62E-02
+26	Michigan	2017	Percent	0.13207	1.78E-02
+26	Michigan	2018	Percent	0.14755	1.76E-02
+26	Michigan	2019	Percent	0.14324	1.78E-02
+26	Michigan	2020	Percent	0.139	1.57E-02
+26	Michigan	2021	Percent	0.13502	1.58E-02
+27	Minnesota	2017	Percent	0.14415	2.84E-02
+27	Minnesota	2018	Percent	0.12014	1.68E-02
+27	Minnesota	2019	Percent	0.10289	2.14E-02
+27	Minnesota	2020	Percent	0.08585	1.90E-02
+27	Minnesota	2021	Percent	0.11088	1.69E-02
+29	Missouri	2017	Percent	0.1603	2.27E-02
+29	Missouri	2018	Percent	0.14402	2.53E-02
+29	Missouri	2019	Percent	0.14828	2.67E-02
+29	Missouri	2020	Percent	0.16169	2.62E-02
+29	Missouri	2021	Percent	0.15717	2.49E-02
+30	Montana	2017	Percent	0.12534	1.70E-02
+30	Montana	2018	Percent	0.13132	2.17E-02
+30	Montana	2019	Percent	0.13638	2.13E-02
+30	Montana	2020	Percent	0.13432	2.09E-02
+30	Montana	2021	Percent	0.13008	1.79E-02
+32	Nevada	2017	Percent	0.17525	2.11E-02
+32	Nevada	2018	Percent	0.13859	2.13E-02
+32	Nevada	2019	Percent	0.09746	1.63E-02
+32	Nevada	2020	Percent	0.13066	2.04E-02
+32	Nevada	2021	Percent	0.14792	1.90E-02
+34	New Jersey	2017	Percent	0.12756	1.39E-02
+34	New Jersey	2018	Percent	0.11701	1.44E-02
+34	New Jersey	2019	Percent	0.11725	1.83E-02
+34	New Jersey	2020	Percent	0.08836	1.37E-02
+34	New Jersey	2021	Percent	0.12941	2.00E-02
+35	New Mexico	2017	Percent	0.17052	2.10E-02
+35	New Mexico	2018	Percent	0.17153	1.80E-02
+35	New Mexico	2019	Percent	0.17113	1.99E-02
+35	New Mexico	2020	Percent	0.17667	1.92E-02
+35	New Mexico	2021	Percent	0.16267	2.02E-02
+36	New York	2017	Percent	0.13115	1.16E-02
+36	New York	2018	Percent	0.13634	1.21E-02
+36	New York	2019	Percent	0.11969	1.18E-02
+36	New York	2020	Percent	0.13064	1.13E-02
+36	New York	2021	Percent	0.14631	1.42E-02
+41	Oregon	2017	Percent	0.14152	2.65E-02
+41	Oregon	2018	Percent	0.11852	1.53E-02
+41	Oregon	2019	Percent	0.13833	2.02E-02
+41	Oregon	2020	Percent	0.11508	2.34E-02
+41	Oregon	2021	Percent	0.14021	2.12E-02
+42	Pennsylvania	2017	Percent	0.17122	1.66E-02
+42	Pennsylvania	2018	Percent	0.15729	1.48E-02
+42	Pennsylvania	2019	Percent	0.13598	1.60E-02
+42	Pennsylvania	2020	Percent	0.15235	1.62E-02
+42	Pennsylvania	2021	Percent	0.15447	1.47E-02
+44	Rhode Island	2017	Percent	0.12951	2.39E-02
+44	Rhode Island	2018	Percent	0.10852	2.20E-02
+44	Rhode Island	2019	Percent	0.12213	2.41E-02
+44	Rhode Island	2020	Percent	0.11271	2.13E-02
+44	Rhode Island	2021	Percent	0.11366	2.27E-02
+50	Vermont	2017	Percent	0.11779	1.82E-02
+50	Vermont	2018	Percent	0.12695	2.02E-02
+50	Vermont	2019	Percent	0.10911	1.72E-02
+50	Vermont	2020	Percent	0.11138	1.73E-02
+50	Vermont	2021	Percent	0.1301	2.40E-02
+51	Virginia	2017	Percent	0.12201	1.75E-02
+51	Virginia	2018	Percent	0.12569	1.63E-02
+51	Virginia	2019	Percent	0.11683	1.56E-02
+51	Virginia	2020	Percent	0.1215	1.82E-02
+51	Virginia	2021	Percent	0.12594	1.66E-02
+53	Washington	2017	Percent	0.12331	1.57E-02
+53	Washington	2018	Percent	0.1168	1.63E-02
+53	Washington	2019	Percent	0.09384	2.27E-02
+53	Washington	2020	Percent	0.11973	1.93E-02
+53	Washington	2021	Percent	0.11742	2.22E-02

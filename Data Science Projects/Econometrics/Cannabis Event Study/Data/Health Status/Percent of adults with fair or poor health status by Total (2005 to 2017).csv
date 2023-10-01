@@ -1,0 +1,378 @@
+Fips	Location	TimeFrame	Data Type	Data	MOE
+2	Alaska	2005	Percent	0.13667	5.58E-03
+2	Alaska	2006	Percent	0.13488	4.95E-03
+2	Alaska	2007	Percent	0.1242	4.87E-03
+2	Alaska	2008	Percent	0.13235	4.70E-03
+2	Alaska	2009	Percent	0.12319	4.43E-03
+2	Alaska	2010	Percent	0.12206	5.41E-03
+2	Alaska	2011	Percent	0.14853	6.55E-03
+2	Alaska	2012	Percent	0.10923	5.33E-03
+2	Alaska	2013	Percent	0.1257	5.91E-03
+2	Alaska	2014	Percent	0.14807	5.59E-03
+2	Alaska	2015	Percent	0.12834	6.76E-03
+2	Alaska	2016	Percent	0.12529	2.05E-02
+2	Alaska	2017	Percent	0.11289	2.20E-02
+4	Arizona	2005	Percent	0.12725	4.38E-03
+4	Arizona	2006	Percent	0.12195	5.65E-03
+4	Arizona	2007	Percent	0.13999	4.97E-03
+4	Arizona	2008	Percent	0.14249	5.62E-03
+4	Arizona	2009	Percent	0.13277	5.44E-03
+4	Arizona	2010	Percent	0.13894	5.24E-03
+4	Arizona	2011	Percent	0.14011	5.95E-03
+4	Arizona	2012	Percent	0.13379	4.40E-03
+4	Arizona	2013	Percent	0.14735	1.09E-02
+4	Arizona	2014	Percent	0.13911	5.98E-03
+4	Arizona	2015	Percent	0.14971	6.69E-03
+4	Arizona	2016	Percent	0.13912	1.73E-02
+4	Arizona	2017	Percent	0.15173	1.68E-02
+5	Arkansas	2005	Percent	0.21014	8.65E-03
+5	Arkansas	2006	Percent	0.19293	6.66E-03
+5	Arkansas	2007	Percent	0.1951	1.07E-02
+5	Arkansas	2008	Percent	0.20356	6.63E-03
+5	Arkansas	2009	Percent	0.22917	6.25E-03
+5	Arkansas	2010	Percent	0.23193	7.70E-03
+5	Arkansas	2011	Percent	0.20023	9.43E-03
+5	Arkansas	2012	Percent	0.22635	9.76E-03
+5	Arkansas	2013	Percent	0.21928	7.83E-03
+5	Arkansas	2014	Percent	0.20953	6.96E-03
+5	Arkansas	2015	Percent	0.19131	7.09E-03
+5	Arkansas	2016	Percent	0.18725	2.04E-02
+5	Arkansas	2017	Percent	0.1953	2.70E-02
+6	California	2005	Percent	0.13031	1.91E-03
+6	California	2006	Percent	0.13742	1.97E-03
+6	California	2007	Percent	0.13059	2.27E-03
+6	California	2008	Percent	0.144	2.14E-03
+6	California	2009	Percent	0.14249	1.92E-03
+6	California	2010	Percent	0.14819	2.12E-03
+6	California	2011	Percent	0.14365	2.02E-03
+6	California	2012	Percent	0.14206	1.75E-03
+6	California	2013	Percent	0.14213	2.16E-03
+6	California	2014	Percent	0.14017	2.03E-03
+6	California	2015	Percent	0.14035	2.20E-03
+6	California	2016	Percent	0.14019	7.50E-03
+6	California	2017	Percent	0.12804	6.85E-03
+8	Colorado	2005	Percent	0.09646	6.00E-03
+8	Colorado	2006	Percent	0.11064	6.47E-03
+8	Colorado	2007	Percent	0.106	3.81E-03
+8	Colorado	2008	Percent	0.11209	4.19E-03
+8	Colorado	2009	Percent	0.11922	4.14E-03
+8	Colorado	2010	Percent	0.11507	5.08E-03
+8	Colorado	2011	Percent	0.12577	3.89E-03
+8	Colorado	2012	Percent	0.12449	3.48E-03
+8	Colorado	2013	Percent	0.11098	4.87E-03
+8	Colorado	2014	Percent	0.1393	5.32E-03
+8	Colorado	2015	Percent	0.14031	6.66E-03
+8	Colorado	2016	Percent	0.10605	2.21E-02
+8	Colorado	2017	Percent	0.10236	2.18E-02
+9	Connecticut	2005	Percent	0.12254	4.02E-03
+9	Connecticut	2006	Percent	0.11389	3.68E-03
+9	Connecticut	2007	Percent	0.12252	3.97E-03
+9	Connecticut	2008	Percent	0.10951	3.58E-03
+9	Connecticut	2009	Percent	0.11513	3.87E-03
+9	Connecticut	2010	Percent	0.11224	4.08E-03
+9	Connecticut	2011	Percent	0.11897	4.00E-03
+9	Connecticut	2012	Percent	0.12118	4.08E-03
+9	Connecticut	2013	Percent	0.1213	3.89E-03
+9	Connecticut	2014	Percent	0.11039	4.93E-03
+9	Connecticut	2015	Percent	0.12703	5.54E-03
+9	Connecticut	2016	Percent	0.10324	1.98E-02
+9	Connecticut	2017	Percent	0.11797	2.19E-02
+10	Delaware	2005	Percent	0.13873	5.47E-03
+10	Delaware	2006	Percent	0.1273	4.43E-03
+10	Delaware	2007	Percent	0.13095	4.69E-03
+10	Delaware	2008	Percent	0.12712	4.87E-03
+10	Delaware	2009	Percent	0.12322	4.28E-03
+10	Delaware	2010	Percent	0.12196	4.93E-03
+10	Delaware	2011	Percent	0.13289	4.88E-03
+10	Delaware	2012	Percent	0.12695	4.56E-03
+10	Delaware	2013	Percent	0.11654	3.95E-03
+10	Delaware	2014	Percent	0.11481	4.81E-03
+10	Delaware	2015	Percent	0.12406	5.92E-03
+10	Delaware	2016	Percent	0.18881	2.33E-02
+10	Delaware	2017	Percent	0.1238	1.98E-02
+11	Dist. of Columbia	2005	Percent	0.1414	4.96E-03
+11	Dist. of Columbia	2006	Percent	0.12575	4.35E-03
+11	Dist. of Columbia	2007	Percent	0.11643	3.66E-03
+11	Dist. of Columbia	2008	Percent	0.12453	3.95E-03
+11	Dist. of Columbia	2009	Percent	0.10342	3.85E-03
+11	Dist. of Columbia	2010	Percent	0.09878	4.17E-03
+11	Dist. of Columbia	2011	Percent	0.10711	4.08E-03
+11	Dist. of Columbia	2012	Percent	0.08838	3.37E-03
+11	Dist. of Columbia	2013	Percent	0.10583	3.22E-03
+11	Dist. of Columbia	2014	Percent	0.09547	3.64E-03
+11	Dist. of Columbia	2015	Percent	0.10773	4.40E-03
+11	Dist. of Columbia	2016	Percent	0.1193	1.40E-02
+11	Dist. of Columbia	2017	Percent	0.11022	1.37E-02
+12	Florida	2005	Percent	0.14046	2.84E-03
+12	Florida	2006	Percent	0.14232	2.88E-03
+12	Florida	2007	Percent	0.15603	3.22E-03
+12	Florida	2008	Percent	0.15825	2.78E-03
+12	Florida	2009	Percent	0.1628	2.99E-03
+12	Florida	2010	Percent	0.16144	3.44E-03
+12	Florida	2011	Percent	0.14834	2.97E-03
+12	Florida	2012	Percent	0.15036	3.05E-03
+12	Florida	2013	Percent	0.14393	3.36E-03
+12	Florida	2014	Percent	0.14435	3.10E-03
+12	Florida	2015	Percent	0.13714	2.80E-03
+12	Florida	2016	Percent	0.14383	1.20E-02
+12	Florida	2017	Percent	0.14298	1.38E-02
+13	Georgia	2005	Percent	0.15082	4.47E-03
+13	Georgia	2006	Percent	0.13313	4.36E-03
+13	Georgia	2007	Percent	0.11839	4.55E-03
+13	Georgia	2008	Percent	0.13536	3.50E-03
+13	Georgia	2009	Percent	0.13116	4.08E-03
+13	Georgia	2010	Percent	0.1413	3.66E-03
+13	Georgia	2011	Percent	0.16172	4.86E-03
+13	Georgia	2012	Percent	0.16214	4.91E-03
+13	Georgia	2013	Percent	0.1476	4.58E-03
+13	Georgia	2014	Percent	0.13873	3.98E-03
+13	Georgia	2015	Percent	0.14553	5.30E-03
+13	Georgia	2016	Percent	0.13839	1.84E-02
+13	Georgia	2017	Percent	0.12403	1.68E-02
+17	Illinois	2005	Percent	0.12332	3.28E-03
+17	Illinois	2006	Percent	0.12839	3.31E-03
+17	Illinois	2007	Percent	0.12442	3.15E-03
+17	Illinois	2008	Percent	0.13567	2.78E-03
+17	Illinois	2009	Percent	0.12295	3.50E-03
+17	Illinois	2010	Percent	0.13605	2.89E-03
+17	Illinois	2011	Percent	0.13899	4.25E-03
+17	Illinois	2012	Percent	0.1264	2.94E-03
+17	Illinois	2013	Percent	0.11883	3.12E-03
+17	Illinois	2014	Percent	0.11849	2.94E-03
+17	Illinois	2015	Percent	0.1174	3.20E-03
+17	Illinois	2016	Percent	0.13115	1.27E-02
+17	Illinois	2017	Percent	0.12236	1.72E-02
+22	Louisiana	2005	Percent	0.19711	9.21E-03
+22	Louisiana	2006	Percent	0.18817	7.82E-03
+22	Louisiana	2007	Percent	0.18496	5.49E-03
+22	Louisiana	2008	Percent	0.18922	6.58E-03
+22	Louisiana	2009	Percent	0.1701	6.19E-03
+22	Louisiana	2010	Percent	0.16687	8.30E-03
+22	Louisiana	2011	Percent	0.19808	8.37E-03
+22	Louisiana	2012	Percent	0.16405	9.37E-03
+22	Louisiana	2013	Percent	0.1639	6.58E-03
+22	Louisiana	2014	Percent	0.18212	6.04E-03
+22	Louisiana	2015	Percent	0.19448	6.59E-03
+22	Louisiana	2016	Percent	0.20168	2.41E-02
+22	Louisiana	2017	Percent	0.22008	2.14E-02
+23	Maine	2005	Percent	0.14745	4.39E-03
+23	Maine	2006	Percent	0.1512	4.55E-03
+23	Maine	2007	Percent	0.16105	4.38E-03
+23	Maine	2008	Percent	0.17765	4.60E-03
+23	Maine	2009	Percent	0.17126	4.63E-03
+23	Maine	2010	Percent	0.16182	5.07E-03
+23	Maine	2011	Percent	0.16217	5.49E-03
+23	Maine	2012	Percent	0.1523	4.14E-03
+23	Maine	2013	Percent	0.13939	5.02E-03
+23	Maine	2014	Percent	0.1409	5.87E-03
+23	Maine	2015	Percent	0.17833	8.06E-03
+23	Maine	2016	Percent	0.14865	2.56E-02
+23	Maine	2017	Percent	0.16329	3.08E-02
+24	Maryland	2005	Percent	0.12103	3.54E-03
+24	Maryland	2006	Percent	0.12472	3.19E-03
+24	Maryland	2007	Percent	0.12517	3.89E-03
+24	Maryland	2008	Percent	0.12441	3.34E-03
+24	Maryland	2009	Percent	0.11136	3.15E-03
+24	Maryland	2010	Percent	0.13084	4.56E-03
+24	Maryland	2011	Percent	0.13171	4.01E-03
+24	Maryland	2012	Percent	0.12388	3.85E-03
+24	Maryland	2013	Percent	0.11811	4.33E-03
+24	Maryland	2014	Percent	0.12984	4.78E-03
+24	Maryland	2015	Percent	0.11362	4.89E-03
+24	Maryland	2016	Percent	0.10964	1.77E-02
+24	Maryland	2017	Percent	0.10852	1.79E-02
+25	Massachusetts	2005	Percent	0.13006	5.03E-03
+25	Massachusetts	2006	Percent	0.12094	4.64E-03
+25	Massachusetts	2007	Percent	0.11565	4.79E-03
+25	Massachusetts	2008	Percent	0.1124	4.32E-03
+25	Massachusetts	2009	Percent	0.11721	4.60E-03
+25	Massachusetts	2010	Percent	0.11167	4.45E-03
+25	Massachusetts	2011	Percent	0.10491	4.11E-03
+25	Massachusetts	2012	Percent	0.11322	4.57E-03
+25	Massachusetts	2013	Percent	0.11194	4.82E-03
+25	Massachusetts	2014	Percent	0.1149	4.67E-03
+25	Massachusetts	2015	Percent	0.10561	4.10E-03
+25	Massachusetts	2016	Percent	0.11816	1.63E-02
+25	Massachusetts	2017	Percent	0.12645	1.48E-02
+26	Michigan	2005	Percent	0.15068	4.35E-03
+26	Michigan	2006	Percent	0.13582	3.81E-03
+26	Michigan	2007	Percent	0.13557	4.11E-03
+26	Michigan	2008	Percent	0.14139	4.04E-03
+26	Michigan	2009	Percent	0.14358	4.20E-03
+26	Michigan	2010	Percent	0.15808	3.39E-03
+26	Michigan	2011	Percent	0.15349	4.68E-03
+26	Michigan	2012	Percent	0.14998	4.81E-03
+26	Michigan	2013	Percent	0.15736	4.66E-03
+26	Michigan	2014	Percent	0.15312	4.18E-03
+26	Michigan	2015	Percent	0.13646	4.64E-03
+26	Michigan	2016	Percent	0.13772	1.93E-02
+26	Michigan	2017	Percent	0.13446	2.03E-02
+27	Minnesota	2005	Percent	0.10255	2.49E-03
+27	Minnesota	2006	Percent	0.09977	4.12E-03
+27	Minnesota	2007	Percent	0.10972	4.00E-03
+27	Minnesota	2008	Percent	0.1064	4.31E-03
+27	Minnesota	2009	Percent	0.11394	4.43E-03
+27	Minnesota	2010	Percent	0.11297	3.80E-03
+27	Minnesota	2011	Percent	0.10697	4.12E-03
+27	Minnesota	2012	Percent	0.10871	3.83E-03
+27	Minnesota	2013	Percent	0.1137	3.10E-03
+27	Minnesota	2014	Percent	0.12192	5.07E-03
+27	Minnesota	2015	Percent	0.11368	6.94E-03
+27	Minnesota	2016	Percent	0.11392	2.28E-02
+27	Minnesota	2017	Percent	0.12707	2.09E-02
+29	Missouri	2005	Percent	0.18697	6.66E-03
+29	Missouri	2006	Percent	0.1618	4.45E-03
+29	Missouri	2007	Percent	0.17404	7.72E-03
+29	Missouri	2008	Percent	0.16411	6.94E-03
+29	Missouri	2009	Percent	0.18593	9.11E-03
+29	Missouri	2010	Percent	0.17914	7.47E-03
+29	Missouri	2011	Percent	0.16503	6.62E-03
+29	Missouri	2012	Percent	0.16023	7.76E-03
+29	Missouri	2013	Percent	0.17232	5.41E-03
+29	Missouri	2014	Percent	0.16037	4.72E-03
+29	Missouri	2015	Percent	0.16008	7.68E-03
+29	Missouri	2016	Percent	0.1494	1.73E-02
+29	Missouri	2017	Percent	0.1539	2.55E-02
+30	Montana	2005	Percent	0.16375	9.40E-03
+30	Montana	2006	Percent	0.13581	9.02E-03
+30	Montana	2007	Percent	0.15092	8.49E-03
+30	Montana	2008	Percent	0.13717	5.69E-03
+30	Montana	2009	Percent	0.13786	5.70E-03
+30	Montana	2010	Percent	0.1383	8.81E-03
+30	Montana	2011	Percent	0.1187	7.79E-03
+30	Montana	2012	Percent	0.12678	4.85E-03
+30	Montana	2013	Percent	0.13166	4.77E-03
+30	Montana	2014	Percent	0.14127	5.94E-03
+30	Montana	2015	Percent	0.13715	5.41E-03
+30	Montana	2016	Percent	0.13018	1.45E-02
+30	Montana	2017	Percent	0.13095	2.81E-02
+32	Nevada	2005	Percent	0.13651	5.13E-03
+32	Nevada	2006	Percent	0.11832	4.39E-03
+32	Nevada	2007	Percent	0.12076	4.73E-03
+32	Nevada	2008	Percent	0.1214	4.66E-03
+32	Nevada	2009	Percent	0.13542	4.64E-03
+32	Nevada	2010	Percent	0.13761	4.11E-03
+32	Nevada	2011	Percent	0.14318	5.36E-03
+32	Nevada	2012	Percent	0.15008	4.44E-03
+32	Nevada	2013	Percent	0.12657	4.43E-03
+32	Nevada	2014	Percent	0.14613	5.87E-03
+32	Nevada	2015	Percent	0.13736	5.50E-03
+32	Nevada	2016	Percent	0.12328	1.66E-02
+32	Nevada	2017	Percent	0.17294	2.18E-02
+34	New Jersey	2005	Percent	0.10396	3.69E-03
+34	New Jersey	2006	Percent	0.11745	4.34E-03
+34	New Jersey	2007	Percent	0.13847	4.00E-03
+34	New Jersey	2008	Percent	0.13247	3.95E-03
+34	New Jersey	2009	Percent	0.11448	3.65E-03
+34	New Jersey	2010	Percent	0.11968	3.59E-03
+34	New Jersey	2011	Percent	0.12105	4.00E-03
+34	New Jersey	2012	Percent	0.12438	4.14E-03
+34	New Jersey	2013	Percent	0.14748	4.78E-03
+34	New Jersey	2014	Percent	0.12539	4.30E-03
+34	New Jersey	2015	Percent	0.11263	4.70E-03
+34	New Jersey	2016	Percent	0.11995	1.44E-02
+34	New Jersey	2017	Percent	0.11752	1.43E-02
+35	New Mexico	2005	Percent	0.15313	5.49E-03
+35	New Mexico	2006	Percent	0.14422	8.11E-03
+35	New Mexico	2007	Percent	0.14152	5.76E-03
+35	New Mexico	2008	Percent	0.17335	7.55E-03
+35	New Mexico	2009	Percent	0.15941	6.86E-03
+35	New Mexico	2010	Percent	0.15778	7.87E-03
+35	New Mexico	2011	Percent	0.16657	7.12E-03
+35	New Mexico	2012	Percent	0.15053	7.23E-03
+35	New Mexico	2013	Percent	0.13709	7.40E-03
+35	New Mexico	2014	Percent	0.16268	4.19E-03
+35	New Mexico	2015	Percent	0.16592	4.56E-03
+35	New Mexico	2016	Percent	0.17109	1.78E-02
+35	New Mexico	2017	Percent	0.17093	2.42E-02
+36	New York	2005	Percent	0.14497	3.09E-03
+36	New York	2006	Percent	0.14408	3.43E-03
+36	New York	2007	Percent	0.13742	2.78E-03
+36	New York	2008	Percent	0.14302	2.51E-03
+36	New York	2009	Percent	0.12752	2.87E-03
+36	New York	2010	Percent	0.13163	2.88E-03
+36	New York	2011	Percent	0.1515	2.71E-03
+36	New York	2012	Percent	0.13921	2.96E-03
+36	New York	2013	Percent	0.12806	2.85E-03
+36	New York	2014	Percent	0.12979	2.90E-03
+36	New York	2015	Percent	0.12043	2.53E-03
+36	New York	2016	Percent	0.12066	1.13E-02
+36	New York	2017	Percent	0.12729	1.12E-02
+41	Oregon	2005	Percent	0.14107	3.71E-03
+41	Oregon	2006	Percent	0.14518	6.19E-03
+41	Oregon	2007	Percent	0.14592	6.36E-03
+41	Oregon	2008	Percent	0.15569	6.49E-03
+41	Oregon	2009	Percent	0.14567	6.60E-03
+41	Oregon	2010	Percent	0.15766	5.27E-03
+41	Oregon	2011	Percent	0.16398	5.30E-03
+41	Oregon	2012	Percent	0.14109	6.02E-03
+41	Oregon	2013	Percent	0.15642	8.25E-03
+41	Oregon	2014	Percent	0.14431	9.81E-03
+41	Oregon	2015	Percent	0.13262	5.60E-03
+41	Oregon	2016	Percent	0.13326	2.19E-02
+41	Oregon	2017	Percent	0.15081	2.91E-02
+42	Pennsylvania	2005	Percent	0.13646	3.89E-03
+42	Pennsylvania	2006	Percent	0.16145	3.56E-03
+42	Pennsylvania	2007	Percent	0.1502	3.94E-03
+42	Pennsylvania	2008	Percent	0.16339	3.84E-03
+42	Pennsylvania	2009	Percent	0.16463	4.05E-03
+42	Pennsylvania	2010	Percent	0.16908	4.01E-03
+42	Pennsylvania	2011	Percent	0.14149	3.23E-03
+42	Pennsylvania	2012	Percent	0.15519	3.60E-03
+42	Pennsylvania	2013	Percent	0.16232	4.80E-03
+42	Pennsylvania	2014	Percent	0.14533	3.35E-03
+42	Pennsylvania	2015	Percent	0.1476	3.77E-03
+42	Pennsylvania	2016	Percent	0.15502	1.55E-02
+42	Pennsylvania	2017	Percent	0.16678	1.79E-02
+44	Rhode Island	2005	Percent	0.13789	4.11E-03
+44	Rhode Island	2006	Percent	0.13567	4.81E-03
+44	Rhode Island	2007	Percent	0.15022	4.97E-03
+44	Rhode Island	2008	Percent	0.14714	4.49E-03
+44	Rhode Island	2009	Percent	0.14609	5.66E-03
+44	Rhode Island	2010	Percent	0.13269	4.70E-03
+44	Rhode Island	2011	Percent	0.15022	5.72E-03
+44	Rhode Island	2012	Percent	0.14106	4.59E-03
+44	Rhode Island	2013	Percent	0.14358	4.69E-03
+44	Rhode Island	2014	Percent	0.15361	5.61E-03
+44	Rhode Island	2015	Percent	0.16379	7.71E-03
+44	Rhode Island	2016	Percent	0.15152	2.63E-02
+44	Rhode Island	2017	Percent	0.13662	2.57E-02
+50	Vermont	2005	Percent	0.11357	4.75E-03
+50	Vermont	2006	Percent	0.11803	4.73E-03
+50	Vermont	2007	Percent	0.12082	4.66E-03
+50	Vermont	2008	Percent	0.11207	4.32E-03
+50	Vermont	2009	Percent	0.13698	5.72E-03
+50	Vermont	2010	Percent	0.11648	4.63E-03
+50	Vermont	2011	Percent	0.11758	4.49E-03
+50	Vermont	2012	Percent	0.12173	4.46E-03
+50	Vermont	2013	Percent	0.11457	5.47E-03
+50	Vermont	2014	Percent	0.1121	4.32E-03
+50	Vermont	2015	Percent	0.09969	4.30E-03
+50	Vermont	2016	Percent	0.125	2.12E-02
+50	Vermont	2017	Percent	0.12122	2.00E-02
+51	Virginia	2005	Percent	0.12195	4.67E-03
+51	Virginia	2006	Percent	0.12238	4.76E-03
+51	Virginia	2007	Percent	0.12896	4.90E-03
+51	Virginia	2008	Percent	0.12874	5.98E-03
+51	Virginia	2009	Percent	0.12536	4.92E-03
+51	Virginia	2010	Percent	0.12549	4.62E-03
+51	Virginia	2011	Percent	0.13149	4.35E-03
+51	Virginia	2012	Percent	0.1327	5.05E-03
+51	Virginia	2013	Percent	0.13297	5.44E-03
+51	Virginia	2014	Percent	0.13006	4.36E-03
+51	Virginia	2015	Percent	0.13886	5.96E-03
+51	Virginia	2016	Percent	0.13833	2.08E-02
+51	Virginia	2017	Percent	0.12572	2.02E-02
+53	Washington	2005	Percent	0.12591	4.64E-03
+53	Washington	2006	Percent	0.12602	3.82E-03
+53	Washington	2007	Percent	0.12273	3.63E-03
+53	Washington	2008	Percent	0.1461	4.89E-03
+53	Washington	2009	Percent	0.13835	4.27E-03
+53	Washington	2010	Percent	0.13641	4.89E-03
+53	Washington	2011	Percent	0.13976	5.64E-03
+53	Washington	2012	Percent	0.14631	4.22E-03
+53	Washington	2013	Percent	0.1159	4.17E-03
+53	Washington	2014	Percent	0.12793	4.55E-03
+53	Washington	2015	Percent	0.12192	6.39E-03
+53	Washington	2016	Percent	0.13629	1.62E-02
+53	Washington	2017	Percent	0.11934	1.67E-02
