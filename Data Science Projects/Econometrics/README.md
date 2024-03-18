@@ -7,7 +7,7 @@ and techniques. Note that some projects are still in progress of being completed
 
 "Cannabis: Legalization and the Economic Effects"
 
-A staggered adoption design of the difference-in-differences model deployed to understand the effects of marijuana legalization by policy passage. Effects to estimate include poverty, household income and GDP. WIP
+A staggered adoption design of the difference-in-differences model deployed to understand the effects of marijuana legalization by policy passage. Collected data on GDP, household income, and poverty rates. Analyzed with HTE-robust estimation methods to decipher effects.
 
 ## College Enrollment
 
