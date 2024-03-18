@@ -8,9 +8,3 @@ WIP
 
 ## BCG Data Science Tasks
 WIP
-
-## Time Series Forecasting with Neural Networks
-WIP
-
-## Customer Segmentation
-WIP
