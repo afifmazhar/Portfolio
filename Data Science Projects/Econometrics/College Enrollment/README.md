@@ -1,3 +1,5 @@
 # [College Enrollment by Race based on Macroeconomic Indicators](https://github.com/afifmazhar/Portfolio/blob/main/Data%20Science%20Projects/Econometrics/College%20Enrollment/Proposal/Time%20Series%20Final.pdf)
 
 I construct a SVAR model based on [Ewing, Beckert, and Ewing 2009](https://github.com/afifmazhar/Portfolio/blob/main/Data%20Science%20Projects/Econometrics/College%20Enrollment/References/Ewing_Beckert_2009.pdf) that extends the general premise of the paper. The original SVAR model included two macroeconomic indicators (economic growth and inflation); I add unemployment rate to measure how college enrollment by race is affected by macroeconomic shocks measured by impulse response functions (IRF). I find "white" students are less likely to enroll in college in the fall and that "minority" students are more likely to enroll in college in the fall.
+
+Data is collected from the US Department of Education, National Center of Education Statistics, Digest for Education Statistics and the Federal Reserve Bank of St. Louis Economic Database. Data is collected from the years 1995 - 2020.
