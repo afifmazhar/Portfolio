@@ -7,7 +7,7 @@ Afif Mazhar is a seasoned economist/data scientist with **2+ years of experience
 ## Skills
 Afif's interests include **causal inference, experimentation, time series and machine learning** - all at scale in production environments.\
 Afif's tools of use include **python, pyspark, DataBricks, PowerBI, SQL, Palantir Foundry, STATA, R.**\
-Afif's specific modeling techniques used include **supervised learning (logistic regression, linear regression, decision trees, XGBoost), causal inference (difference-in-differences, synthetic control), unsupervised learning (a priori rules, k-means clustering), and time series (ARIMA, VAR).**
+Afif's specific modeling techniques used include **supervised learning (logistic regression, linear regression, decision trees, XGBoost), causal inference (difference-in-differences, synthetic control), unsupervised learning (a priori rules, k-means clustering), and time series (ARIMA, VAR, Prophet, XGBoost).**
 
 A quick rundown of major projects:
 
