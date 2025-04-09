@@ -24,3 +24,7 @@ Binary classification model that predicts whether a customer will pay off their 
 
 ## The Causal Effect of Online Ads on Sales (WIP)
 (WIP) Use Google Ads public datasets to identify if paid ads provide more sales or would customers have bought the product anyways. Methods include uplift modeling, a/b testing, and regression discontinuity design. Deployment will be a web application that marketers can analyze their campaign data and get causal insights.
+
+## [College Enrollment by Race based on Macroeconomic Indicators](https://github.com/afifmazhar/Portfolio/tree/main/Data%20Science%20Projects/Econometrics/College%20Enrollment)
+
+I construct a SVAR model based on [Ewing, Beckert, and Ewing 2009](https://github.com/afifmazhar/Portfolio/blob/main/Data%20Science%20Projects/Econometrics/College%20Enrollment/References/Ewing_Beckert_2009.pdf) that extends the general premise of the paper. The original SVAR model included two macroeconomic indicators (economic growth and inflation); I add unemployment rate to measure how college enrollment by race is affected by macroeconomic shocks measured by impulse response functions (IRF). I find "white" students are less likely to enroll in college in the fall and that "minority" students are more likely to enroll in college in the fall.
