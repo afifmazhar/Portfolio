@@ -1,1 +1,1 @@
-# [College Enrollment by Race based on Macroeconomic Indicators](Time Series Final.pdf)
+# [College Enrollment by Race based on Macroeconomic Indicators](https://github.com/afifmazhar/Portfolio/blob/main/Data%20Science%20Projects/Econometrics/College%20Enrollment/Proposal/Time%20Series%20Final.pdf)
