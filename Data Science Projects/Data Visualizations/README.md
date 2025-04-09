@@ -15,3 +15,11 @@ WIP
 * published via Tableau Public
 
 end to end pipeline - API integration, data wrangling, visualization and deployment
+
+# Tableau Sales Practice
+
+Elementary data analysis assigned for a Bachelor's course.
+
+# Border Crossing Practice
+
+Interactive Tableau Visual to identify border crossing, neat visuals.
